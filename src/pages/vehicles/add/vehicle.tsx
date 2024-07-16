@@ -29,7 +29,7 @@ import { ReadableStreamDefaultController } from 'stream/web'
 const AddNewVehiclePage = () => {
   const AddVehicleValidationSchema = Yup.object().shape({
     firstName: Yup.string()
-      .min(2, 'First name is too short!')
+      .min(2, 'First name is too short!')//TODO change to veh
       .max(50, 'First name is too long!')
       .required('First name is required!'),
     lastName: Yup.string()
@@ -103,7 +103,7 @@ const AddNewVehiclePage = () => {
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiAccountPlus} title="Add new vehicle" main>
           <Button
-            href="/vehicles/overview"
+            href="/vehicles/"
             // target="_blank"
             icon={mdiAccountMultipleOutline}
             label="Back to vehicle overview"

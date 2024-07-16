@@ -10,32 +10,35 @@ import SectionMain from '../../components/Section/Main'
 import SectionTitleLineWithButton from '../../components/Section/TitleLineWithButton'
 import TableSampleClients from '../../components/Table/SampleClients'
 import { getPageTitle } from '../../config'
+import VehiclesTable from 'components/Table/VehiclesTable'
+
+
 const VehiclesPage: React.FC=()=>{
 
     return(
             <>
               <Head>
-                <title>{getPageTitle('Vehicles')}</title>
+                <title>{getPageTitle('Vehicles overview')}</title>
               </Head>
               <SectionMain>
                 <SectionTitleLineWithButton icon={mdiTableBorder} title="Vehicles" main>
                   <Button
-                    href="vehicles/add/vehicle"
-              
-                    icon={mdiCar2Plus}//поменять на машинку с плюсом
-                    label="Star on GitHub"
+                    href="/vehicles/add/vehicle"
+                    icon={mdiCar2Plus}
+                    label="Add vehicle"
                     color="contrast"
                     roundedFull
                     small
                   />
                 </SectionTitleLineWithButton>
         
-                <NotificationBar color="info" icon={mdiMonitorCellphone}>
+               { /*<NotificationBar color="info" icon={mdiMonitorCellphone}>
                   <b>Responsive table.</b> Collapses on mobile
-                </NotificationBar>
+                </NotificationBar>*/}
         
                 <CardBox className="mb-6" hasTable>
-                  <TableSampleClients />
+                 { /*<TableSampleClients />*/}
+                 <VehiclesTable/>
                 </CardBox>
         
                 <SectionTitleLineWithButton icon={mdiTableOff} title="Empty variation" />
